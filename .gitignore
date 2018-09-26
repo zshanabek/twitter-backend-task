@@ -1,2 +1,3 @@
 .vscode
 senv/
+__pycache__
