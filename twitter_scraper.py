@@ -58,13 +58,10 @@ def gen_tweets(url, headers, count):
     return tweets
 
 def get_tweets(user, count=30):
-    url = f'https://twitter.com/i/profiles/show/{user}/timeline/tweets?include_available_features=1&include_entities=1&include_new_items_bar=true'
+    url = f'https://twitter.com/i/profiles/show/{user}/timeline/tweets'
     headers = {
         'Accept': 'application/json, text/javascript, */*; q=0.01',
-        'Referer': f'https://twitter.com/{user}',
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8',
-        'X-Twitter-Active-User': 'yes',
-        'X-Requested-With': 'XMLHttpRequest'
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8'
     }
     tweets = []
     for tweet in gen_tweets(url, headers, count):
@@ -72,12 +69,10 @@ def get_tweets(user, count=30):
     return tweets
 
 def get_tweets_by_hashtag(hashtag, count=30):
-    url = f'https://twitter.com/i/search/timeline?q=%23{hashtag}&include_available_features=1&include_entities=1'
+    url = f'https://twitter.com/i/search/timeline?q=%23{hashtag}'
     headers = {
         'Accept': 'application/json, text/javascript, */*; q=0.01',
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8',
-        'X-Twitter-Active-User': 'yes',
-        'X-Requested-With': 'XMLHttpRequest'
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8'
     }
     tweets = []
     for tweet in gen_tweets(url, headers, count):
