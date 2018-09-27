@@ -1,6 +1,7 @@
 #!senv/bin/python
-from twitter_scraper import get_tweets, get_tweets_by_hashtag
-from flask import Flask, jsonify, make_response, request
+from twitter_scraper import get_tweets
+from flask import Flask, jsonify, make_response, request, abort
+import pdb
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
@@ -10,19 +11,22 @@ def index(username):
 	args = request.args
 	try:
 		count = int(args['limit'])
-		tweets = get_tweets(username, count)
-	except KeyError:
-		tweets = get_tweets(username)
-	return jsonify({'tweets': tweets})
+	except:
+		count = 30
+	tweets = get_tweets(username, 1, count)
+	if tweets == 404:
+		abort(404)
+	else:
+		return jsonify({'tweets': tweets})
 
 @app.route('/hashtags/<string:hashtag>', methods=['GET'])
 def get_by_hashtags(hashtag):
 	args = request.args
 	try:
 		count = int(args['limit'])
-		tweets = get_tweets_by_hashtag(hashtag, count)
-	except KeyError:
-		tweets = get_tweets_by_hashtag(hashtag)
+	except:
+		count = 30
+	tweets = get_tweets(hashtag, 2, count)	
 	return jsonify({'tweets': tweets})
 
 @app.errorhandler(404)
