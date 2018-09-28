@@ -36,7 +36,7 @@ $ curl localhost:5000/users/zshanabek
       "likes": 213, 
       "replies": 54, 
       "retweets": 42, 
-      "text": "If you need to write documentation for your API, use @postmanclient. Excellent software.\n\n#postmanclient"
+      "text": "If you need to document your API, use @postmanclient. Excellent software.\n#postmanclient"
     }, 
   ]
 }
