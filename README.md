@@ -1,6 +1,8 @@
 # Introduction
 This api provides data about tweets. Get tweets searching by user or hashtag.  
-You can read documentation [here...](https://documenter.getpostman.com/view/1700393/RWgjZ2DU)
+You can read documentation [here...](https://documenter.getpostman.com/view/1700393/RWgjZ2DU)  
+The project is deployed on Heroku and can be accessed through this link: https://twittermicro.herokuapp.com/
+
 # Installation
 
 1. Clone repository
@@ -20,6 +22,7 @@ $ python start.py
 ```bash
 $ curl localhost:5000/users/zshanabek
 ```
+Expect json response:
 ```json
 {
   "tweets": [
@@ -37,7 +40,7 @@ $ curl localhost:5000/users/zshanabek
       "replies": 54, 
       "retweets": 42, 
       "text": "If you need to document your API, use @postmanclient. Excellent software.\n#postmanclient"
-    }, 
+    }
   ]
 }
 ```
