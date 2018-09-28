@@ -1,6 +1,6 @@
 # Introduction
-This api provides data about tweets. Get tweets searching by user or hashtag.  
-You can read documentation [here...](https://documenter.getpostman.com/view/1700393/RWgjZ2DU)
+This API provides data about tweets. Get tweets searching by user or hashtag.  
+You can read documentation for API [here...](https://documenter.getpostman.com/view/1700393/RWgjZ2DU)
 # Installation
 
 1. Clone repository
