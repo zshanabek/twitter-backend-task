@@ -14,7 +14,7 @@ $ pip install -r requirements.txt
 ```
 3. Run server
 ```bash
-$ python start.py
+$ python3 start.py
 ```
 4. Get tweets
 ```bash
