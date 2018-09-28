@@ -10,7 +10,7 @@ $ cd zhunisali-project
 ```
 2. Install dependencies
 ```bash
-$ pip install requirements.txt
+$ pip install -r requirements.txt
 ```
 3. Run server
 ```bash
@@ -44,7 +44,7 @@ $ curl localhost:5000/users/zshanabek
 
 # Overview
 You can set the limit of tweets in response by typing argument: `limit`.  
-For example. `localhost:5000/users/zshanabek?limit=10`
+For example. `localhost:5000/users/zshanabek?limit=10`.  
 Default is 30.
 
 Only Python 3.6+ is supported
