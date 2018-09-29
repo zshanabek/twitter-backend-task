@@ -1,7 +1,7 @@
 # Introduction
 This api provides data about tweets. Get tweets searching by user or hashtag.  
 You can read documentation [here...](https://documenter.getpostman.com/view/1700393/RWgjZ2DU)  
-The project is deployed on Heroku and can be accessed through this link: https://twittermicro.herokuapp.com/
+The project is deployed on Heroku and can be accessed through this link: https://twittermicro.herokuapp.com/users/twitter
 
 # Installation
 
