@@ -4,7 +4,7 @@ from datetime import datetime
 
 session = HTMLSession()
 
-def get_tweets(user, type_, count=10):
+def get_tweets(user, type_, count):
     """Gets tweets for a given user, via the Twitter frontend API."""
     url1 = f'https://twitter.com/i/profiles/show/{user}/timeline/tweets'
     url2 = f'https://twitter.com/i/search/timeline?q=%23{user}'
