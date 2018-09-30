@@ -13,11 +13,12 @@ def index(username):
 		count = int(args['limit'])
 	except:
 		count = 30
-	tweets = get_tweets(username, 1, count)
-	if tweets == 404:
-		abort(404)
-	else:
-		return jsonify({'tweets': tweets})
+	tweets = []
+	for tweet in get_tweets(username, 1, count):
+		if tweet == 404:
+			abort(404)
+		tweets.append(tweet)
+	return jsonify({'tweets': tweets})
 
 @app.route('/hashtags/<string:hashtag>', methods=['GET'])
 def get_by_hashtags(hashtag):
@@ -26,7 +27,9 @@ def get_by_hashtags(hashtag):
 		count = int(args['limit'])
 	except:
 		count = 30
-	tweets = get_tweets(hashtag, 2, count)	
+	tweets = []
+	for tweet in get_tweets(hashtag, 2, count):
+		tweets.append(tweet)
 	return jsonify({'tweets': tweets})
 
 @app.errorhandler(404)
