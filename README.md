@@ -12,7 +12,7 @@ $ cd zhunisali-project
 ```
 2. Install dependencies
 ```bash
-$ pip install -r requirements.txt
+$ sudo -H pip install -r requirements.txt
 ```
 3. Run server
 ```bash
@@ -44,7 +44,10 @@ Expect json response:
   ]
 }
 ```
-
+# Unit tests
+```bash
+$ python3 unit_tests.py 
+```
 # Overview
 You can set the limit of tweets in response by typing argument: `limit`.  
 For example. `localhost:5000/users/zshanabek?limit=10`.  
