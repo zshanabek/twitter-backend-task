@@ -12,11 +12,11 @@ $ cd zhunisali-project
 ```
 2. Install dependencies
 ```bash
-$ sudo -H pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 3. Run server
 ```bash
-$ python3 start.py
+$ python start.py
 ```
 4. Get tweets
 ```bash
