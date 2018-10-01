@@ -1,7 +1,6 @@
 #!senv/bin/python
 from twitter_scraper import get_tweets
 from flask import Flask, jsonify, make_response, request, abort
-import pdb
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
