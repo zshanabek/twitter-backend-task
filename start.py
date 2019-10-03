@@ -11,7 +11,7 @@ def index(username):
 	try:
 		count = int(args['limit'])
 	except:
-		count = 30
+		count = 10
 	tweets = []
 	for tweet in get_tweets(username, 1, count):
 		if tweet == 404:

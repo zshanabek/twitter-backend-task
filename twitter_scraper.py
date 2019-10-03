@@ -35,7 +35,7 @@ def get_tweets(user, type_, count):
                 if count == 0:
                     break
                 user_id = tweet.find(".account-group")[0].attrs['data-user-id']
-                href = tweet.find(".account-group")[0].attrs['href']
+                href = tweet.find(".account-group")[0].attrs['href'][1:]
                 full_name = tweet.find('.fullname')[0].full_text 
                 text = tweet.find('.tweet-text')[0].full_text
                 time = datetime.fromtimestamp(
@@ -49,8 +49,8 @@ def get_tweets(user, type_, count):
                 hashtags = [hashtag_node.full_text for hashtag_node in tweet.find('.twitter-hashtag')]
                 tweets.append({
                     'account': {
-                        'fullname': full_name,
-                        'href': href,
+                        'full_name': full_name,
+                        'username': href,
                         'id': user_id
                     },
                     'date': time,
